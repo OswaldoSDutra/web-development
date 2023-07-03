@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.application.Dto\WebApi.application.Dto.csproj" />
+    <ProjectReference Include="..\WebApi.Infrastructure.CrossCutting.IoC\WebApi.Infrastructure.CrossCutting.IoC.csproj" />
+    <ProjectReference Include="..\WebApi.Infrastructure.Data\WebApi.Infrastructure.Data.csproj" />
   </ItemGroup>
 
 </Project>

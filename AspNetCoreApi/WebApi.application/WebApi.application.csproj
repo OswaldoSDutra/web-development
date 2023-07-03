@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.application.Dto\WebApi.application.Dto.csproj" />
+    <ProjectReference Include="..\WebApi.Domain.Core\WebApi.Domain.Core.csproj" />
+    <ProjectReference Include="..\WebApi.Infrastructure.CrossCutting.Adapter\WebApi.Infrastructure.CrossCutting.Adapter.csproj" />
+  </ItemGroup>
+
+</Project>

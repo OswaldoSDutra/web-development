@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.application\WebApi.application.csproj" />
+    <ProjectReference Include="..\WebApi.Domain.Core\WebApi.Domain.Core.csproj" />
+    <ProjectReference Include="..\WebApi.Domain.Services\WebApi.Domain.Services.csproj" />
+    <ProjectReference Include="..\WebApi.Infrastructure.CrossCutting.Adapter\WebApi.Infrastructure.CrossCutting.Adapter.csproj" />
+    <ProjectReference Include="..\WebApi.Infrastructure.Repository\WebApi.Infrastructure.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
