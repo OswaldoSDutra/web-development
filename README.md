@@ -1,4 +1,4 @@
-# Building a AWS API
+# Building an AWS API
 
 Sources:
 
