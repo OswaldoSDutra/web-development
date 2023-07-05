@@ -1,0 +1,17 @@
+#ENVIRONMENT
+environmentName: ${ENV_NAME}
+
+#CREDENTIALS
+userName: baeldung
+userPassword: ${USER_PASSWORD}
+
+#AWS REGION
+awsRegion: us-east-1
+
+#API ENDPOINT
+findByIdEndpoint: http://${API_ID}.execute-api.localhost.localstack.cloud:4566/Prod/task/1
+createEndpoint: http://${API_ID}.execute-api.localhost.localstack.cloud:4566/Prod/task/
+
+#DB ENDPOINT
+dbHost: http://${LOCALSTACK_HOSTNAME}:4566
+

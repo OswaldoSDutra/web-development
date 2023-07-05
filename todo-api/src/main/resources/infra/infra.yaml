@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Todo Serverless Application Model example
+
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: dev
+
+Globals:
+  Api:
+    EndpointConfiguration: REGIONAL
+    Name: "TodoAPI"
+  Function:
+    Runtime: java11
+    CodeUri: s3://todo-bucket/todo-api-1.0-SNAPSHOT.jar
+    Environment:
+      Variables:
+        ENV_NAME: !Ref EnvironmentName
+
+Resources:
+  CreateTaskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.swd.adapter.CreateTaskHandler::handleRequest
+      MemorySize: 512
+      Events:
+        CreateTaskApi:
+          Type: Api
+          Properties:
+            Path: /task
+            Method: POST
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref TaskTable
+
+  TaskTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: Task
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH

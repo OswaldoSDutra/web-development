@@ -1,0 +1,62 @@
+{
+  "path": "\/todo\/aa526d45-b979-4a02-87b6-9557cb2b7387",
+  "headers": {
+    "x-localstack-tgt-api": "apigateway",
+    "User-Agent": "curl\/7.88.1",
+    "X-Forwarded-For": "172.17.0.1, ek37xfyrs3.execute-api.localhost.localstack.cloud:4566",
+    "x-localstack-edge": "http:\/\/ek37xfyrs3.execute-api.localhost.localstack.cloud:4566",
+    "Host": "ek37xfyrs3.execute-api.localhost.localstack.cloud:4566",
+    "accept": "*\/*"
+  },
+  "isBase64Encoded": false,
+  "pathParameters": {
+    "id": "aa526d45-b979-4a02-87b6-9557cb2b7387"
+  },
+  "multiValueQueryStringParameters": null,
+  "multiValueHeaders": {
+    "x-localstack-tgt-api": [
+      "apigateway"
+    ],
+    "User-Agent": [
+      "curl\/7.88.1"
+    ],
+    "X-Forwarded-For": [
+      "172.17.0.1, ek37xfyrs3.execute-api.localhost.localstack.cloud:4566"
+    ],
+    "x-localstack-edge": [
+      "http:\/\/ek37xfyrs3.execute-api.localhost.localstack.cloud:4566"
+    ],
+    "Host": [
+      "ek37xfyrs3.execute-api.localhost.localstack.cloud:4566"
+    ],
+    "accept": [
+      "*\/*"
+    ]
+  },
+  "requestContext": {
+    "resourceId": "ik17eadeou",
+    "authorizer": {},
+    "resourcePath": "\/todo\/{id}",
+    "httpMethod": "GET",
+    "requestTime": "09\/Jun\/2023:22:08:57 +0000",
+    "accountId": "000000000000",
+    "path": "\/Prod\/todo\/aa526d45-b979-4a02-87b6-9557cb2b7387",
+    "protocol": "HTTP\/1.1",
+    "stage": "Prod",
+    "domainPrefix": "ek37xfyrs3",
+    "requestTimeEpoch": 1686348537592,
+    "requestId": "0132e345-c37e-4c19-856f-dcb2abaa0771",
+    "identity": {
+      "accountId": "000000000000",
+      "sourceIp": "172.17.0.1",
+      "userAgent": "curl\/7.88.1"
+    },
+    "domainName": "ek37xfyrs3.execute-api.localhost.localstack.cloud",
+    "apiId": "ek37xfyrs3"
+  },
+  "resource": "\/todo\/{id}",
+  "body": "",
+  "httpMethod": "GET",
+  "queryStringParameters": null,
+  "stageVariables": {}
+}

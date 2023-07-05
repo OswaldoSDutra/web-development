@@ -1,0 +1,90 @@
+#Souces
+1 - https://www.baeldung.com/java-aws-lambda
+2 - https://www.baeldung.com/aws-lambda-dynamodb-java
+3 - https://www.baeldung.com/aws-lambda-api-gateway
+4 - https://www.baeldung.com/aws-serverless
+5 - https://www.baeldung.com/java-enterprise-aws-lambda
+
+aws --endpoint-url=http://localhost:4566 kinesis list-streams
+
+$ aws configure --profile default
+
+	AWS Access Key ID [****************test]: test
+	AWS Secret Access Key [****************test]: test
+	Default region name [us-east-1]: us-east-1
+
+####Create bucket
+awslocal s3api create-bucket --bucket todo-bucket
+
+####Upload the lambda to the bucket
+awslocal s3api put-object --bucket todo-bucket --key todo-api-1.0-SNAPSHOT.jar --body .\target\todo-api-1.0-SNAPSHOT.jar
+
+####Create a template file "infra.yaml"
+
+####User the template file to create the infrastructure
+awslocal cloudformation deploy --template-file .\src\main\resources\infra\infra.yaml --stack-name todo-stack
+
+OBS.: It is possible to change the enviroment at runtime
+
+awslocal cloudformation deploy --template-file .\src\main\resources\infra\infra.yaml --parameter-overrides "EnvironmentName=test" 
+--stack-name todo-stack
+
+####Check the dynamodb table
+awslocal dynamodb list-tables --endpoint-url http://localhost:4566
+
+####USE THE FOLLOWING COMMAND TO GET THE API ID
+
+awslocal cloudformation describe-stack-resources --stack-name todo-stack
+
+####GET THE API ID
+	    "PhysicalResourceId": "6p5rftscrb", 
+            "ResourceType": "AWS::ApiGateway::RestApi"
+
+####GET THE StageId
+
+	"PhysicalResourceId": "Prod",
+        "ResourceType": "AWS::ApiGateway::Stage",
+
+####CHECK THE RESOURCES CREATED
+
+awslocal apigateway get-resources --rest-api-id ia0449h6qw
+
+	Where: awslocal apigateway get-resources --rest-api-id <REST_API_ID>
+
+####USE CURL TO CALL THE RESOURCE
+curl -X GET http://2snemyvdy2.execute-api.localhost.localstack.cloud:4566/Prod/todo/aa526d45-b979-4a02-87b6-9557cb2b7387
+
+	Where:	curl -X GET http://<ApiID>.execute-api.localhost.localstack.cloud:4566/<StageID>/todo/1
+
+
+curl -X POST http://2snemyvdy2.execute-api.localhost.localstack.cloud:4566/Prod/task/ -d '{"title":"go grocery shooping"}' -H "Content-Type: application/json"
+
+####CHECK IF THE DATA WAS CREATED
+awslocal dynamodb scan --table-name Todo --endpoint-url http://localhost:4566
+
+####GET lambda logs
+#List groups
+	awslocal logs describe-log-groups
+
+	#Find group name   
+		"logGroupName": "/aws/lambda/todo-stack-GetTodoListFunction-ec82a92f",
+
+#List group's streams
+	awslocal logs describe-log-streams --log-group-name /aws/lambda/todo-stack-GetTodoListFunction-ec82a92f
+
+	Where: awslocal logs describe-log-streams --log-group-name /aws/lambda/<logGroupName>
+	
+	#Finde stream name
+		"logStreamName": "2023/06/07/[$LATEST]1897bf7f3bd70548259b27e609e801e2"
+
+#Get stream's logs
+	awslocal logs get-log-events --log-group-name /aws/lambda/todo-stack-GetTodoListFunction-ec82a92f --log-stream-name '2023/06/07/[$LATEST]153544aa9bf86b4ba952ce0a84657448'
+
+	Where: awslocal logs get-log-events --log-group-name /aws/lambda/<logGroupName> --log-stream-name <logStreamName>
+
+####DELTE THE STACK
+awslocal cloudformation delete-stack --stack-name todo-stack
+
+
+
+
