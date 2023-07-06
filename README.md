@@ -5,7 +5,7 @@ Sources:
 https://www.javaguides.net/2021/10/spring-boot-crud-rest-api-project-using-IntelliJ-IDEA.html
 
 1. Configuring a mysql image   
-   1. Create the mysql container:
+   1. Create a mysql container:  
    `docker container run -p [host forward port]:[continer port] --name docker-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=ems -d mysql` 
    2. Confirm container was created:  
    `docker container ls`
