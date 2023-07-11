@@ -35,7 +35,6 @@ namespace AspNetCoreApi.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
 

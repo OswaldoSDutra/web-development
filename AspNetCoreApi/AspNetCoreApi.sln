@@ -9,25 +9,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{0ECFD5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Domain", "WebApi.Domain\WebApi.Domain.csproj", "{EAEA4900-80BB-4277-866C-FA91A3AC73F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Domain.Core", "WebApi.Domain.Core\WebApi.Domain.Core.csproj", "{D2AF85D4-E010-416A-AC3A-4AEFDB7B170F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Domain.Core", "WebApi.Domain.Core\WebApi.Domain.Core.csproj", "{D2AF85D4-E010-416A-AC3A-4AEFDB7B170F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Domain.Services", "WebApi.Domain.Services\WebApi.Domain.Services.csproj", "{272DF7F0-BC18-4B2D-B281-0C3A17AF7795}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Domain.Services", "WebApi.Domain.Services\WebApi.Domain.Services.csproj", "{272DF7F0-BC18-4B2D-B281-0C3A17AF7795}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{6EA76ADC-8EA0-46B9-8E35-CFAD5B179BB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.application", "WebApi.application\WebApi.application.csproj", "{E48BA2EE-3EFE-4D4C-8C2B-C06123944D39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.application", "WebApi.application\WebApi.application.csproj", "{E48BA2EE-3EFE-4D4C-8C2B-C06123944D39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.application.Dto", "WebApi.application.Dto\WebApi.application.Dto.csproj", "{D05382DD-857C-47FD-9918-766C07CBD7BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.application.Dto", "WebApi.application.Dto\WebApi.application.Dto.csproj", "{D05382DD-857C-47FD-9918-766C07CBD7BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5582B1F0-2D52-4B10-86F3-822E9E8689A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Infrastructure.CrossCutting.Adapter", "WebApi.Infrastructure.CrossCutting.Adapter\WebApi.Infrastructure.CrossCutting.Adapter.csproj", "{8FC5FD96-A0FC-4571-A120-68FA6188A42E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Infrastructure.CrossCutting.Adapter", "WebApi.Infrastructure.CrossCutting.Adapter\WebApi.Infrastructure.CrossCutting.Adapter.csproj", "{8FC5FD96-A0FC-4571-A120-68FA6188A42E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Infrastructure.CrossCutting.IoC", "WebApi.Infrastructure.CrossCutting.IoC\WebApi.Infrastructure.CrossCutting.IoC.csproj", "{5FFD56BE-9EB8-4735-9B2E-D09A983CFC77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Infrastructure.CrossCutting.IoC", "WebApi.Infrastructure.CrossCutting.IoC\WebApi.Infrastructure.CrossCutting.IoC.csproj", "{5FFD56BE-9EB8-4735-9B2E-D09A983CFC77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Infrastructure.Repository", "WebApi.Infrastructure.Repository\WebApi.Infrastructure.Repository.csproj", "{64F13169-D673-4B84-A2E4-B4A55D5B1BCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Infrastructure.Repository", "WebApi.Infrastructure.Repository\WebApi.Infrastructure.Repository.csproj", "{64F13169-D673-4B84-A2E4-B4A55D5B1BCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Infrastructure.Data", "WebApi.Infrastructure.Data\WebApi.Infrastructure.Data.csproj", "{7D57CC5E-9419-46FC-B3C1-C884FC3D94F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Infrastructure.Data", "WebApi.Infrastructure.Data\WebApi.Infrastructure.Data.csproj", "{7D57CC5E-9419-46FC-B3C1-C884FC3D94F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B5E9C36F-AF5A-4097-9737-43AD5A246956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi", "TestApi\TestApi.csproj", "{EA053698-FC0A-4923-8B06-D167FB351D02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{7D57CC5E-9419-46FC-B3C1-C884FC3D94F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D57CC5E-9419-46FC-B3C1-C884FC3D94F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D57CC5E-9419-46FC-B3C1-C884FC3D94F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA053698-FC0A-4923-8B06-D167FB351D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA053698-FC0A-4923-8B06-D167FB351D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA053698-FC0A-4923-8B06-D167FB351D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA053698-FC0A-4923-8B06-D167FB351D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,7 @@ Global
 		{5FFD56BE-9EB8-4735-9B2E-D09A983CFC77} = {5582B1F0-2D52-4B10-86F3-822E9E8689A4}
 		{64F13169-D673-4B84-A2E4-B4A55D5B1BCF} = {5582B1F0-2D52-4B10-86F3-822E9E8689A4}
 		{7D57CC5E-9419-46FC-B3C1-C884FC3D94F5} = {5582B1F0-2D52-4B10-86F3-822E9E8689A4}
+		{EA053698-FC0A-4923-8B06-D167FB351D02} = {B5E9C36F-AF5A-4097-9737-43AD5A246956}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F3AAB6C-2D15-4A05-BF64-5B8A9292DC51}

@@ -1,6 +1,14 @@
 # Building a .Net Core API
 
-Source: [Implementando na prática Rest API](https://medium.com/beelabacademy/implementando-na-pr%C3%A1tica-rest-api-com-conceitos-de-ddd-net-2160291a44b7)
+## Source:
+### Development:  
+https://medium.com/beelabacademy/implementando-na-pr%C3%A1tica-rest-api-com-conceitos-de-ddd-net-2160291a44b7
+### Testing:  
+https://www.learmoreseekmore.com/2022/02/dotnet6-unit-testing-aspnetcore-web-api-using-xunit.html
+
+### C# input and output
+https://zetcode.com/csharp/input-output/
+
 
 1. Start a sql server using a microsoft docker image:
 
